@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/judges-stats-service/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/judges-stats-service/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/dj-stats-service/target" />
       <excludeFolder url="file://$MODULE_DIR$/djstats-service/target" />
       <excludeFolder url="file://$MODULE_DIR$/judges-stats-service/target" />
     </content>

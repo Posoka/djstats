@@ -7,9 +7,13 @@
 		<artifactId>djstats</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>djstats-service</artifactId>
-	<name>djstats-service</name>
+	<artifactId>dj-stats-service</artifactId>
+	<name>dj-stats-service</name>
 	<description>DJ Stats Microservice</description>
+	<properties>
+		<java.version>21</java.version>
+		<maven.compiler.release>21</maven.compiler.release>
+	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>io.micronaut</groupId>
@@ -32,6 +36,14 @@
 			<artifactId>micronaut-test-junit5</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>io.projectreactor</groupId>
+			<artifactId>reactor-test</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -40,6 +52,19 @@
 				<artifactId>micronaut-maven-plugin</artifactId>
 				<configuration>
 					<mainClass>com.djstats.DjStatsApplication</mainClass>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+							<version>${lombok.version}</version>
+						</path>
+					</annotationProcessorPaths>
 				</configuration>
 			</plugin>
 		</plugins>

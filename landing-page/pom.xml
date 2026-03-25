@@ -7,12 +7,13 @@
 		<artifactId>djstats</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>judges-stats-service</artifactId>
-	<name>judges-stats-service</name>
-	<description>Judges Stats Microservice</description>
+	<artifactId>landing-page</artifactId>
+	<name>landing-page</name>
+	<description>Landing Page Microservice</description>
 	<properties>
 		<java.version>21</java.version>
-		<maven.compiler.release>21</maven.compiler.release>
+		<maven.compiler.source>21</maven.compiler.source>
+		<maven.compiler.target>21</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -32,6 +33,10 @@
 			<artifactId>micronaut-jackson-databind</artifactId>
 		</dependency>
 		<dependency>
+			<groupId>io.micronaut.views</groupId>
+			<artifactId>micronaut-views-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>io.micronaut.test</groupId>
 			<artifactId>micronaut-test-junit5</artifactId>
 			<scope>test</scope>
@@ -43,7 +48,7 @@
 				<groupId>io.micronaut.maven</groupId>
 				<artifactId>micronaut-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.judgesstats.JudgesStatsApplication</mainClass>
+					<mainClass>com.djstats.landing.LandingPageApplication</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Judge Panel</title>
+</head>
+<body>
+    <h1>Welcome to Judge Panel</h1>
+    <p>This is the Judge Panel web interface.</p>
+    <script>
+        fetch('/judge/world')
+            .then(response => response.text())
+            .then(data => document.getElementById('judgeWorld').innerText = data);
+    </script>
+</body>
+</html>

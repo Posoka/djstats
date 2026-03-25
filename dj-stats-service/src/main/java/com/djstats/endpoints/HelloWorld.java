@@ -3,7 +3,7 @@ package com.djstats.endpoints;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 
-@Controller("/hello")
+@Controller("/dj")
 public class HelloWorld {
     @Get("/world")
     public String hello() {
